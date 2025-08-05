@@ -88,8 +88,8 @@ def get_default_arguments(description=None):
     # EvoLearner Only
     parser.add_argument("--use_data_properties", type=bool, default=True, help="Use data properties?")
     parser.add_argument("--tournament_size", type=int, default=7, help="Tournament size.")
-    parser.add_argument("--population_size", type=int, default=800, help="Population size.")
-    parser.add_argument("--num_generations", type=int, default=200, help="Number of generations.")
+    parser.add_argument("--population_size", type=int, default=80, help="Population size.") # This was 800 but it is too much
+    parser.add_argument("--num_generations", type=int, default=20, help="Number of generations.") # This was 200 but too much
     parser.add_argument("--height_limit", type=int, default=17, help="Height limit.")
     parser.add_argument("--gain", type=int, default=2048, help="Gain.")
     parser.add_argument("--penalty", type=int, default=1, help="Penalty.")

@@ -1,5 +1,5 @@
 
-## Neural Reasoning for Robust Concept Learning
+## Neural Reasoning for Robust Instance Retrieval
 
 This repository provides the implementation of the Embedding Based Reasoner dubbed EBR. With this repository, once can perform instance retrieval even within an inconsistent knowldege base. EBR leverages KGE to perform reasoning over incomplete and inconsistent knowledge bases (KBs). We employ a neural link predictor to facilitate the retrieval of missing data and handle inconsistencies.
 

@@ -10,16 +10,16 @@ We based our implementation on [Ontolearn](https://github.com/dice-group/Ontolea
 ```shell
 # To create a virtual python env with conda 
 conda create -n venv python=3.10.14 --no-default-packages && conda activate venv && pip install -e . && cd Ontolearn
-# To unzip the benchmark datasets knowledge graphs
+# To unzip the benchmark datasets' knowledge graphs
 unzip KGs.zip
 # To unzip the learning problems
 unzip LPs.zip
 ```
 Other datasets and learning problems can be manually downloaded from [here](https://drive.google.com/file/d/1LWmrtVQFh2_9eWOUsGZTGVeTkxi3n5pk/view?usp=sharing) 
 
-## Retrieval results on error free datasets 
+## Retrieval results on error-free datasets 
 
-To reproduce our results on error free datasets, run the commands below
+To reproduce our results on error-free datasets, run the commands below
 
 ```shell
 python examples/retrieval_eval.py --path_kg "KGs/Family/father.owl"
@@ -29,10 +29,10 @@ python examples/retrieval_eval.py --path_kg "KGs/Family/family-benchmark_rich_ba
 # Results of the Family dataset
 ```
 
-For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested from line 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on semnatic Bible but for other datasets can be obtain similarly by adding the corect path to the argument ```--path_kg```.
+For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested in from lines 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on semantic Bible, but for other datasets can be obtained similarly by adding the correct path to the argument ```--path_kg```.
 
 ```shell
-# results on the semnatic bible data
+# Results on the semantic bible data
 
 python examples/retrieval_eval.py --path_kg "KGs/Semantic_bible/semantic_bible.owl" --seed 1 --ratio_sample_nc 1 --ratio_sample_object_prob 1 --path_report "ALCQI_semantic_seed_all_nc.csv"
 # OWLClass expressions
@@ -84,7 +84,7 @@ python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Mutagenesis/mu
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Mutagenesis/mutagenesis.owl" --ratio 0.4 --operation "incomplete" --number_of_incomplete_graphs 5 --sample Yes
 # Results of the Carcinogenesis dataset
 ```
-To get the results with other ratio (0.1, 0.2, 0.6, 0.8, 0.9 etc...), just add it after the argument ```--ratio``` and run the same command. For results on inconcistencies, just change the argument ```--operation``` to "inconsistent" (this will not necessary make the KB inconsistent but will add noises in the data at the choosen level). See below for an example on the Father and Family datasets.
+To get the results with other ratios (0.1, 0.2, 0.6, 0.8, 0.9 etc), just add it after the argument ```--ratio``` and run the same command. For results on inconsistencies, just change the argument ```--operation``` to "inconsistent" (this will not necessarily make the KB inconsistent but will add noises in the data at the choosen level). See below for an example on the Father and Family datasets.
 
 ```shell
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Family/father.owl" --ratio 0.4 --operation "inconsistent" --number_of_incomplete_graphs 5

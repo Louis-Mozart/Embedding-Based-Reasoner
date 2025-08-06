@@ -1,9 +1,9 @@
 
 ## Neural Reasoning for Robust Instance Retrieval
 
-This repository provides the implementation of the Embedding Based Reasoner dubbed EBR. With this repository, once can perform instance retrieval even within an inconsistent knowldege base. EBR leverages KGE to perform reasoning over incomplete and inconsistent knowledge bases (KBs). We employ a neural link predictor to facilitate the retrieval of missing data and handle inconsistencies.
+This repository provides the implementation of the Embedding-Based Reasoner dubbed EBR. With this repository, one can perform instance retrieval even within an inconsistent knowledge base. EBR leverages KGE to perform reasoning over incomplete and inconsistent knowledge bases (KBs). We employ a neural link predictor to facilitate the retrieval of missing data and handle inconsistencies.
 
-We based our implementation on [Ontolearn](https://github.com/dice-group/Ontolearn). We would like to thank for the readable codebase.
+We based our implementation on [Ontolearn](https://github.com/dice-group/Ontolearn). We would like to thank you for the readable codebase.
 
 ## Installation
 
@@ -29,7 +29,7 @@ python examples/retrieval_eval.py --path_kg "KGs/Family/family-benchmark_rich_ba
 # Results of the Family dataset
 ```
 
-For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested in from lines 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on semantic Bible, but for other datasets can be obtained similarly by adding the correct path to the argument ```--path_kg```.
+For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested in from lines 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on the semantic Bible, but for other datasets can be obtained similarly by adding the correct path to the argument ```--path_kg```.
 
 ```shell
 # Results on the semantic bible data
@@ -59,7 +59,7 @@ python examples/retrieval_eval.py --path_kg "KGs/Semantic_bible/semantic_bible.o
 # max cardinality restrictions, n = {1,2,3} 
 ```
 
-## To track EBR path for intance retrieval
+## To track EBR path for instance retrieval
 ```shell
 python examples/EBR_with_tree.py
 ```
@@ -84,7 +84,7 @@ python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Mutagenesis/mu
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Mutagenesis/mutagenesis.owl" --ratio 0.4 --operation "incomplete" --number_of_incomplete_graphs 5 --sample Yes
 # Results of the Carcinogenesis dataset
 ```
-To get the results with other ratios (0.1, 0.2, 0.6, 0.8, 0.9 etc), just add it after the argument ```--ratio``` and run the same command. For results on inconsistencies, just change the argument ```--operation``` to "inconsistent" (this will not necessarily make the KB inconsistent but will add noises in the data at the choosen level). See below for an example on the Father and Family datasets.
+To get the results with other ratios (0.1, 0.2, 0.6, 0.8, 0.9, etc), just add it after the argument ```--ratio``` and run the same command. For results on inconsistencies, just change the argument ```--operation``` to "inconsistent" (this will not necessarily make the KB inconsistent but will add noise in the data at the chosen level). See below for an example of the Father and Family datasets.
 
 ```shell
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Family/father.owl" --ratio 0.4 --operation "inconsistent" --number_of_incomplete_graphs 5
@@ -100,7 +100,7 @@ python examples/retrieval_eval.py --path_kg "KGs/Family/father.owl"
 ```
 
 
-## Example of Concepts retrieval results on Father dataset:
+## Example of Concepts retrieval results on the Father dataset:
 
 |   | Expression             | Type                     | Jaccard Similarity | F1  | Runtime Benefits      | Runtime EBR        | Symbolic Retrieval                                                                                                                                               | EBR Retrieval                                                                                                                                         |
 |---|------------------------|--------------------------|--------------------|-----|-----------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -115,7 +115,7 @@ python examples/retrieval_eval.py --path_kg "KGs/Family/family-benchmark_rich_ba
 # Results of the Family dataset
 ```
 
-For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested from line 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on semnatic Bible but for other datasets can be obtain similarly by adding the corect path to the argument ```--path_kg```.
+For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested in from lines 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on the semantic Bible, but for other datasets can be obtained similarly by adding the correct path to the argument ```--path_kg```.
 
 ```shell
 # results on the semnatic bible data
@@ -153,17 +153,17 @@ To get the results on concept learning on error free Family dataset, run
 python examples/concept_learning_evaluation_reasoners.py --reasoner Pellet --operation normal --kb "KGs/Family/family-benchmark_rich_background.owl" --lps "LPs/Family/lps.json"
 ```
 
-This will run the algorithm of the four comcept learners CELOE, OCEL, CLIP and Evolearner with Pellet as the reasoner on the family dataset.
+This will run the algorithm of the four concept learners CELOE, OCEL, CLIP, and Evolearner with Pellet as the reasoner on the family dataset.
 
-After the `--reaoner` flag we can choose different other reasoners: `["EBR", "Pellet", "HermiT", "JFact", "Openllet", "Structural"]`
+After the `--reaoner` flag, we can choose different other reasoners: `["EBR", "Pellet", "HermiT", "JFact", "Openllet", "Structural"]`
 
 To have the results on the inconsistent or incomplete put after the  ```--operation```  argument `inconsistent` or `incomplete`.
 
-The results for other datatsets can be obtained in a similar manner by changing the knowledge base argument `--kb` and the corresponding learning problems `--lps`.
-The path to all knowledge bases can be found at `Ontolearn/KGs` and `Ontolearn/datasets` while the learning problems are in `Ontolearn/LPs`.
-For instance the path to the Vicodi dataset is `Ontolearn/datasets/vicodi/kb` and the corresponding LPs can be found at `Ontolearn/datasets/vicodi/training_data/training_data_prep.json`
+The results for other datasets can be obtained similarly by changing the knowledge base argument `--kb` and the corresponding learning problems `--lps`.
+The path to all knowledge bases can be found at `Ontolearn/KGs` and `Ontolearn/datasets`, while the learning problems are in `Ontolearn/LPs`.
+For instance, the path to the Vicodi dataset is `Ontolearn/datasets/vicodi/kb` and the corresponding LPs can be found at `Ontolearn/datasets/vicodi/training_data/training_data_prep.json`
 
-Therefore the result for the inconsistent Vicodi dataset with ratio 0.1 using the EBR reasoner can be obtained by running
+Therefore, the result for the inconsistent Vicodi dataset with a ratio of 0.1 using the EBR reasoner can be obtained by running
 
 ```shell
 python examples/concept_learning_evaluation_reasoners.py --reasoner EBR --operation inconsistent --ratio 0.1 --kb "datasets/vicodi/kb" --lps "datasets/vicodi/training_data/training_data_prep.json"
@@ -171,7 +171,7 @@ python examples/concept_learning_evaluation_reasoners.py --reasoner EBR --operat
 
 ## Effect of the threshold
 
-To see the effect of the threhold gamma, run the same codes by adding the argument `--gamma 0.9` which means we are setting a threshold of 0.9. The default threshold is set to 0.5
+To see the effect of the threshold gamma, run the same code by adding the argument `--gamma 0.9`, which means we are setting a threshold of 0.9. The default threshold is set to 0.5
 
 
 ## Example of the concept learning results on the Family dataset

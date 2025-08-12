@@ -60,10 +60,11 @@ python examples/retrieval_eval.py --path_kg "KGs/Semantic_bible/semantic_bible.o
 ```
 
 ## To track EBR path for instance retrieval
+THe image below can be generated using the command below. Just specify the concept you would like to track in this [file](https://github.com/Louis-Mozart/Embedding-Based-Reasoner/blob/cache_for_owl_reasoners/examples/EBR_with_tree.py)
 ```shell
 python examples/EBR_with_tree.py
 ```
-<p align="center"> <img src="Image_movie.png" alt="EBR Path Example" width="500"> </p>
+<p align="center"> <img src="reasoning_tree_output.png" alt="EBR Path Example"> </p>
 
 ## Results on incompleteness or inconsistencies
 

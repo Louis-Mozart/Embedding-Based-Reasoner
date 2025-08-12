@@ -62,9 +62,8 @@ python examples/retrieval_eval.py --path_kg "KGs/Semantic_bible/semantic_bible.o
 ## To track EBR path for instance retrieval
 ```shell
 python examples/EBR_with_tree.py
- <p align="center"> <img src="Image_movie.png" alt="EBR Path Example" width="500"> </p>
 ```
-
+<p align="center"> <img src="Image_movie.png" alt="EBR Path Example" width="500"> </p>
 
 ## Results on incompleteness or inconsistencies
 

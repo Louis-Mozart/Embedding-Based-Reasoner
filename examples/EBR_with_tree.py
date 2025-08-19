@@ -185,7 +185,7 @@ EBR = TripleStoreNeuralReasoner(path_of_kb="KGs/Family/father.owl", gamma=0.9)
 reasoner = EBR  
 A =OWLObjectAllValuesFrom(property=OWLObjectProperty(IRI('http://example.com/father#','hasChild')),filler=OWLClass(IRI('http://example.com/father#','male')))
 
-# A= OWLClass(IRI('http://example.com/father#','person'))
+# A= OWLClass(IRI('http://example.com/father#','person')) #Uncomment for simpler class expressions
 B = OWLObjectComplementOf(OWLClass(IRI('http://example.com/father#','person')))
 concept = OWLObjectIntersectionOf([A, B])  # Example OWL expression
 reasoning_tree = build_reasoning_tree(reasoner, concept)

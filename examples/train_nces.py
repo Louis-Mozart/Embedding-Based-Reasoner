@@ -5,7 +5,7 @@
 
 3. For ROCES, run: `python examples/train_nces.py --kb /data/upb/users/n/nkouagou/profiles/unix/cs/Ontolearn/KGs/Family/family-benchmark_rich_background.owl --synthesizer ROCES --path_train_data ./ROCESData/family/training_data/Data.json --storage_path ./ROCESData/family/`
 
-Note: One can leave the option `--path_train_data` and new training data will be generated on the fly. However, this would take some time.
+Note: One can leave the flag `--path_train_data` and new training data will be generated on the fly. However, this would take some time.
 """
 
 

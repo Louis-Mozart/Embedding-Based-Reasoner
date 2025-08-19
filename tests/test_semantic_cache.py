@@ -23,8 +23,8 @@ class TestSemanticCache:
         self.neural_reasoner = "EBR"
         self.num_concepts = 800
         self.cache_size = 0.8*self.num_concepts
-        self.eviction = "LRU"
-        self.cache_type = "cold"
+        self.eviction = "LRU" #You can also choose MRU, RP, FIFO, and LIFO
+        self.cache_type = "cold" #Or hot
 
     def run_cache_tests(self, cache_semantic, cache_non_semantic):
         assert cache_semantic["hit_ratio"] >= cache_non_semantic["hit_ratio"], f"Expected semantic caching to have higher hit ratio, but got {cache_semantic['hit_ratio']} vs {cache_non_semantic['hit_ratio']}"

@@ -2,7 +2,7 @@
 Fitting OWL Class Expression Learners:
 
 Given positive examples (E^+)  and negative examples (E^-),
-Evaluate the performances of OWL Class Expression Learners  w.r.t. the quality of learned/found OWL Class Expression
+Evaluate the performances of OWL Class Expression Learners  w.r.t to the quality of learned/found OWL Class Expression
 
 Example to run the script
 python examples/concept_learning_evaluation.py --lps LPs/Family/lps.json --kb KGs/Family/family-benchmark_rich_background.owl --max_runtime 3 --report family.csv

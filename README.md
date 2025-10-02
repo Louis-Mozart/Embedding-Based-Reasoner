@@ -29,7 +29,7 @@ python examples/retrieval_eval.py --path_kg "KGs/Family/family-benchmark_rich_ba
 # Results of the Family dataset
 ```
 
-For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested in from lines 136-140 of this [file](examples/retrieval_eval.py). Below we only present how to get results on the semantic Bible, but for other datasets can be obtained similarly by adding the correct path to the argument ```--path_kg```.
+For larger datasets, we have to sample the number of entities and relations. For the experiments to run fast, we need to select the type of instance we are interested in from lines 136-140 of this [file](examples/retrieval_eval.py). Below, we only present how to obtain results on the semantic Bible; for other datasets, similar results can be obtained by adding the correct path to the argument ```--path_kg``` .
 
 ```shell
 # Results on the semantic bible data

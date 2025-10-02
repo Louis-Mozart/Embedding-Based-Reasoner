@@ -86,7 +86,7 @@ python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Mutagenesis/mu
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Mutagenesis/mutagenesis.owl" --ratio 0.4 --operation "incomplete" --number_of_incomplete_graphs 5 --sample Yes
 # Results of the Carcinogenesis dataset
 ```
-To get the results with other ratios (0.1, 0.2, 0.6, 0.8, 0.9, etc), just add it after the argument ```--ratio``` and run the same command. For results on inconsistencies, just change the argument ```--operation``` to "inconsistent" (this will not necessarily make the KB inconsistent but will add noise in the data at the chosen level). See below for an example of the Father and Family datasets.
+To get the results with other ratios (0.1, 0.2, 0.6, 0.8, 0.9, etc), just add it after the argument ```--ratio``` and run the same command. For results on inconsistencies, just change the argument ```--operation``` to "inconsistent" (this will not necessarily make the KB inconsistent, but will add noise in the data at the chosen level). See below for an example of the Father and Family datasets.
 
 ```shell
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Family/father.owl" --ratio 0.4 --operation "inconsistent" --number_of_incomplete_graphs 5

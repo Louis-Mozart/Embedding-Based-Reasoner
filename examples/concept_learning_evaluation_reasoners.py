@@ -186,7 +186,6 @@ def dl_concept_learning(args):
     else:
         ratio_str = str(args.ratio).replace(".", "_")
         df.to_csv(f"{output_dir}/{args.data_name}_{args.reasoner}_{ratio_str}.csv", index=False)
-
     print(df)
     print(df.select_dtypes(include="number").mean())
 
@@ -195,7 +194,7 @@ def dl_concept_learning(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Description Logic Concept Learning')
     parser.add_argument("--max_runtime", type=int, default=60)
-    parser.add_argument("--lps", type=str, default="LPs/Family/lps.json")#, required=True)
+    parser.add_argument("--lps", type=str, default="LPs/Family/lps.json")
     parser.add_argument("--lps_difficult", type=str, default="datasets/family/training_data/training_data_prep.json")
     parser.add_argument("--kb", type=str, default="KGs/Family/family-benchmark_rich_background.owl")#,required=True)
     parser.add_argument("--path_pretrained_kge", type=str, default=None)

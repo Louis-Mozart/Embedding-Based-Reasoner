@@ -114,7 +114,7 @@ def dl_concept_learning(args):
                 )
             learners_per_algo[algo_name][path] = learner
             
-    # for str_target_concept, examples in selected_problems.items():
+    # For str_target_concept, examples in selected_problems.items():
     for str_target_concept, examples in tqdm(selected_problems.items(), desc="Processing problems"):
         print('\n\nTarget concept:', str_target_concept)
         p = set(examples['positive_examples'])

@@ -287,7 +287,7 @@ class TripleStoreNeuralReasoner:
         elif isinstance(expression, OWLObjectIntersectionOf):
             """ Handling intersection of class expressions:
             Given an OWLObjectIntersectionOf (C ⊓ D),  
-            retrieve its instances by intersecting the instance of each operands.
+            retrieve its instances by intersecting the instances of each operand.
             {x | phi(x, type, C) ≥ γ} ∩ {x | phi(x, type, D) ≥ γ}
             """
             # Get the class expressions

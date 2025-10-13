@@ -113,8 +113,7 @@ def dl_concept_learning(args):
                     max_runtime=args.max_runtime
                 )
             learners_per_algo[algo_name][path] = learner
-
-    # Run each LP
+            
     # for str_target_concept, examples in selected_problems.items():
     for str_target_concept, examples in tqdm(selected_problems.items(), desc="Processing problems"):
         print('\n\nTarget concept:', str_target_concept)

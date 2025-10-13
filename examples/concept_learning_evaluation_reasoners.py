@@ -136,7 +136,7 @@ def dl_concept_learning(args):
 
             for path in paths:
                 try:
-                    if algo_name == "Evo":
+                    if algo_name == "Evo": #Is this a bug of Evolearner
                         kb_local = KnowledgeBaseEBR(path=path, which_reasoner=args.reasoner, use_cache=args.use_cache, path_kge=None, gamma=args.gamma)
                         learner = learner_cls(
                             knowledge_base=kb_local,

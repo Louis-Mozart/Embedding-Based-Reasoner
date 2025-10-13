@@ -200,7 +200,7 @@ class TripleStoreNeuralReasoner:
         return all_subconcepts
     
     def most_general_classes(self) -> List[OWLClass]:  # pragma: no cover
-        """At least it has single subclass and there is no superclass"""
+        """At least it has a single subclass and there is no superclass"""
         owl_concepts_not_having_parents=set()
         for c in self.classes_in_signature():
             direct_parents=set()

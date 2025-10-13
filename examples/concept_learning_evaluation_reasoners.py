@@ -6,7 +6,6 @@ Evaluate the performances of OWL Class Expression Learners  w.r.t. the quality o
 
 Example to run the script
 python examples/concept_learning_evaluation.py --lps LPs/Family/lps.json --kb KGs/Family/family-benchmark_rich_background.owl --max_runtime 30 --report family.csv
-
 """
 import json
 import time

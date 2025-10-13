@@ -219,7 +219,7 @@ class TripleStoreNeuralReasoner:
         return [i for i in owl_concepts_not_having_parents]
 
     def least_general_named_concepts(self) -> Generator[OWLClass, None, None]:  # pragma: no cover
-        """At least it has single superclass and there is no subclass"""
+        """At least it has a single superclass and there is no subclass"""
         for _class in self.classes_in_signature():
             for concept in self.subconcepts(
                     named_concept=_class

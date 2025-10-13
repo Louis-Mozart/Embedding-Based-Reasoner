@@ -226,7 +226,7 @@ class TripleStoreNeuralReasoner:
             ):
                 break
             else:
-                # checks if superclasses is not empty -> there is at least one superclass
+                # checks if superclasses are not empty -> there is at least one superclass
                 if superclasses := list(
                         self.get_direct_parents(_class)
                 ):

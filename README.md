@@ -8,7 +8,7 @@ We based our implementation on [Ontolearn](https://github.com/dice-group/Ontolea
 ## Installation
 
 ```shell
-# To create a virtual python environment with conda 
+# To create a virtual Python environment with conda 
 conda create -n venv python=3.10.14 --no-default-packages && conda activate venv && pip install -e . && cd Ontolearn
 # To unzip the benchmark datasets' knowledge graphs
 unzip KGs.zip

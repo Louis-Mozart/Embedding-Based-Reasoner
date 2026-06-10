@@ -2,7 +2,7 @@
 ## Neural Reasoning for Robust Instance Retrieval
 
 This repository provides the implementation of the Embedding-Based Reasoner dubbed EBR. With this repository, one can perform instance retrieval even within an inconsistent knowledge base. EBR leverages KGE to perform reasoning over incomplete and inconsistent knowledge bases (KBs). We employ a neural link predictor to facilitate the retrieval of missing data and handle inconsistencies. 
-We based our implementation on [Ontolearn](https://github.com/dice-group/Ontolearn). We the readable codebase.
+We based our implementation on [Ontolearn](https://github.com/dice-group/Ontolearn). We would like to thank the Author for the readable codebase.
 
 ## Installation
 

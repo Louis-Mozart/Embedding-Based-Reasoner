@@ -92,7 +92,7 @@ python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Family/father.
 # Results of the Father dataset
 
 python examples/retrieval_eval_under_incomplete.py --path_kg "KGs/Family/family-benchmark_rich_background.owl" --ratio 0.4 --operation "inconsistent" --number_of_incomplete_graphs 5
-# Results of the Family dataset
+# Results on the Family dataset
 ```
 
 ## Results of the Father dataset
